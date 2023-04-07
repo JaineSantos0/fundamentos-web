@@ -23,36 +23,56 @@
         <div class="contatos container">
             <h2>Contatos</h2>
             <div>
-                <label>Nome</label>
-                <input type="text">
+                <form>
+                    <label>Nome</label>
+                    <input type="text" id="nome" onkeyup='validaNome()'>
+                    <div id="txtNome"></div>
+              
+                    <label>Email</label>
+                    <input type="text" id="email" onkeyup='validaEmail()'>
+                    <div id="txtEmail"></div>
+            
+                    <label>Assunto</label>
+                    <textarea cols="50" rows="15" onkeyup='validaAssunto()'></textarea>
+                    <div id="txtAssunto"></div>
+            
+                </form>
+                <div class="enviar">
+                    <input type="submit" value="Enviar" onclick='enviar()'>
+                </div>
             </div>
-            <div>
-                <label>Email</label>
-                <input type="text">
-            </div>
-            <div>
-                <label>Assunto</label>
-                <textarea cols="50" rows="15"></textarea>
+            <div class="final container">
+                <h3>Endereço</h3>
+                <p>R. Pamplona, 145 - Cerqueira César, São Paulo - SP</p>
+                <div class="maps container">
+                    <iframe id="map" onmouseout='mapNormal()' onmousemove='mapzoom()' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.2404687632816!2d-46.651204199999995!3d-23.559805500000003!
+                    2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59b61fd60a2d%3A0x2f8805a6ec9c2efb!2sR.%20Pamplona%2C%20145%20-%20Cerqueira
+                    %20C%C3%A9sar%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001405-900!5e0!3m2!1spt-BR!2sbr!4v1680639278216!5m2!1spt-BR!2sbr" 
+                    width="560" 
+                    height="315" 
+                    style="border-radius: 10px;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
             </div>
         </div>
     </main>
     <footer>
-        <div class="final container">
-            <h3>Endereço</h3>
-            <h4>R. Pamplona, 145 - Cerqueira César</h4>
-            <div class="maps container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.2404687632816!2d-46.651204199999995!3d-23.559805500000003!
-                2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59b61fd60a2d%3A0x2f8805a6ec9c2efb!2sR.%20Pamplona%2C%20145%20-%20Cerqueira
-                %20C%C3%A9sar%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001405-900!5e0!3m2!1spt-BR!2sbr!4v1680639278216!5m2!1spt-BR!2sbr" 
-                width="560" 
-                height="315" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+        <div class="footer-container container">
+            <div class="footer-contacts">
+                <a href="@pokemon">@pokemon</a>
+                <a href="/pokemon">/pokemon</a>
             </div>
-        </div>
+            <div>
+                <p>Pokemon Ltda. Todos direitos reservados</p>
+            </div>
+            <div class="footer-terms">
+                <p>Política de privacidade</p>
+                <p>Termos de uso</p>
+            </div>
     </footer>
+    <script src="/js/script.js"></script>
 </body>
 </html>

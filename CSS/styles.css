@@ -26,7 +26,7 @@ nav {
     background-color: var(--color-CornflowerBlue);
     display: flex;
     align-items: center;
-    height: 70px;
+    height: 100px;
 }
 
 main {
